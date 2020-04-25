@@ -1,3 +1,4 @@
+# git cleanup-branches
 
 This simple script will delete local branches which are:
 
@@ -7,29 +8,18 @@ This simple script will delete local branches which are:
 Script is interactive and will ask before pruning the remote or deleting
 branches.
 
-
-Run using docker:
-
-```
-git clone ...
-docker build -t git-cleanup-branches .
-cd dir-with-git-repo
-docker run -it --rm -v $(pwd):/workdir -v$HOME:/root:ro git-cleanup-branches
-```
-
-Run using python3:
+Installation:
 
 ```
-git clone ...
-docker build -t git-cleanup-branches .
-cd dir-with-git-repo
-python3 -u ./git-cleanup-branches.py
+curl https://raw.githubusercontent.com/weirdgiraffe/git-cleanup-branches/master/git-cleanup-branches.py --output /usr/local/bin/git-cleanup-branches
+chmod +x /usr/local/bin/git-cleanup-branches
 ```
 
+Then open new shell and use as `git cleanup-branches`.
 
+**Note:** you need python3 to be installed in order to run this script
 
-
-# Examples
+# examples
 
 Script gives you list of branches to be deleted and waits for confirmation:
 
