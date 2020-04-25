@@ -119,7 +119,7 @@ for item in bd:
 
 if len([x for x in bk if x in lb]) > 0:
     if not yes_or_no(
-        '\nstale branches in {0} is about to be pruned.'
+        '\nstale branches in {0} are about to be pruned.'
         '\nif you will press y now it would be impossible'
         '\nto link your stale local branches to stale'
         '\nremote branches in {0}.'
