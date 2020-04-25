@@ -2,17 +2,19 @@
 
 When you're working on some project for a while the amount of git branches is
 getting up, so it's getting hard to understand which branches are still useful
-and which were already merged and deleted from the remote. This script try to
-address this problem by providing simple interactive experience to remove branches
+and which were already merged and deleted from the remote. This script tries to
+address this problem by providing a simple, interactive experience to remove branches
 which were deleted at remote and those which were already merged.
 
 This simple script will delete local branches which are:
 
 - deleted in remote (remote name could be set via `--remote`, by default `origin`)
-- merget to the current branch
+- merged into the current branch
 
-Script is interactive and will ask before pruning the remote or deleting
+The script is interactive and will ask before pruning the remote or deleting
 branches.
+
+**Note:** you need python3 to be installed to run this script
 
 Installation:
 
@@ -20,14 +22,11 @@ Installation:
 curl https://raw.githubusercontent.com/weirdgiraffe/git-cleanup-branches/master/git-cleanup-branches.py --output /usr/local/bin/git-cleanup-branches
 chmod +x /usr/local/bin/git-cleanup-branches
 ```
-
-Then open new shell and use as `git cleanup-branches`.
-
-**Note:** you need python3 to be installed in order to run this script
+Then open a new shell, go to a git repository and use it with `git cleanup-branches`.
 
 # examples
 
-Script gives you list of branches to be deleted and waits for confirmation:
+The script gives you a list of branches to be deleted and waits for confirmation:
 
 ```
 $ git cleanup-branches
@@ -69,7 +68,7 @@ continue? (y/N): y
 Deleted branch feature/b (was 031b5b312).
 Deleted branch feature/c (was ab120153e).
 
-stale branches in origin is about to be pruned.
+stale branches in origin are about to be pruned.
 if you will press y now it would be impossible
 to link your stale local branches to stale
 remote branches in origin.
