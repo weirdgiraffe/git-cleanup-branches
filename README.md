@@ -119,7 +119,7 @@ continue? (y/N): y
 Deleted branch feature/a (was ce195b1ef).
 Deleted branch feature/b (was 031b5b312).
 Deleted branch feature/c (was ab120153e).
-Pruning origin
+Pruning foo
 URL: git@github.com:xxx.git
  * [pruned] foo/feature/a
  * [pruned] foo/feature/b
