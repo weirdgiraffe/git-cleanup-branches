@@ -1,5 +1,11 @@
 # git cleanup-branches
 
+When you're working on some project for a while the amount of git branches is
+getting up, so it's getting hard to understand which branches are still useful
+and which were already merged and deleted from the remote. This script try to
+address this problem by providing simple interactive experience to remove branches
+which were deleted at remote and those which were already merged.
+
 This simple script will delete local branches which are:
 
 - deleted in remote (remote name could be set via `--remote`, by default `origin`)
